@@ -56,3 +56,37 @@ iOS розроблена компанією Apple. Вона використов
 - Media відповідає за графіку, звук і відео.
 - UIKit та SwiftUI використовуються для створення інтерфейсу.
 - Applications є готовими програмами користувача.
+
+---
+
+# 4. Архітектура Android
+
+```mermaid
+flowchart TD
+    A[Android Applications] --> B[Android Framework]
+    B --> C[Android Runtime ART]
+    B --> D[Native Libraries]
+    B --> E[System Services]
+    C --> F[Linux Kernel]
+    D --> F
+    E --> F
+    F --> G[Hardware]
+```
+
+Android використовує багаторівневу структуру. Застосунки працюють через фреймворки та системні бібліотеки, які в кінцевому результаті взаємодіють з ядром Linux.
+
+---
+
+# 5. Архітектура iOS
+
+```mermaid
+flowchart TD
+    A[iOS Applications] --> B[UIKit / SwiftUI]
+    B --> C[Media Services]
+    C --> D[Core Services]
+    D --> E[Core OS]
+    E --> F[XNU Kernel]
+    F --> G[Hardware]
+```
+
+В iOS застосунки використовують системні фреймворки Apple. Нижні рівні відповідають за роботу операційної системи та обладнання.
